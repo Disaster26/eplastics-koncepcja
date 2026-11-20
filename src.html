@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>eplastics.pl - portal branży tworzyw sztucznych, recyklingu i opakowań (podgląd)</title>
+<meta name="description" content="Podgląd koncepcji nowego portalu eplastics.pl: wiadomości, analizy, rankingi, Plastics Review, konferencje REPACK i płatna prenumerata.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/archivo-latin-800-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m-720.webp" imagesrcset="img/hero-m-720.webp 720w, img/hero-m-1080.webp 1080w" imagesizes="100vw" media="(max-width:699px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2560.webp 2560w" imagesizes="100vw" media="(min-width:700px)" fetchpriority="high">
+<style>
+@font-face{font-family:Archivo;font-style:italic;font-weight:800;font-display:swap;src:url(fonts/archivo-latin-800-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2026,U+20AC}
+@font-face{font-family:Archivo;font-style:italic;font-weight:800;font-display:swap;src:url(fonts/archivo-latin-ext-800-italic.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Archivo;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/archivo-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2026,U+20AC}
+@font-face{font-family:Archivo;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/archivo-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2026,U+20AC}
+@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2026,U+20AC}
+@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+:root{--red:#FF0000;--red-d:#D80000;--blue:#0A50A1;--navy:#082F5E;--ink:#0E1A2B;--muted:#4B5668;--gray:#F1F4F8;--line:#DCE3EC;--hh:64px;--wrap:1240px;--pad:clamp(16px,4vw,40px);--slant:11px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hh) + 8px)}
+body{margin:0;background:#FFFFFF;color:var(--ink);font:400 16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Archivo,Inter,sans-serif;font-style:italic;font-weight:800;line-height:1.08;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4.2vw,46px)}
+h3{font-size:clamp(19px,2vw,22px);line-height:1.2}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.sec{padding:clamp(56px,8vw,104px) 0}
+.sec-gray{background:var(--gray)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px;margin-bottom:clamp(28px,4vw,44px)}
+.sec-head p{max-width:560px;color:var(--muted);margin-top:14px}
+.btn{--c:var(--red);display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;background:var(--c);color:#FFFFFF;font:600 16px/1 Inter,sans-serif;text-decoration:none;border:0;cursor:pointer;clip-path:polygon(var(--slant) 0,100% 0,calc(100% - var(--slant)) 100%,0 100%);transition:background .15s}
+.btn:hover{--c:var(--red-d)}
+.btn-white{--c:#FFFFFF;color:var(--navy)}
+.btn-white:hover{--c:#E6EDF6}
+.btn-blue{--c:var(--blue)}
+.btn-blue:hover{--c:var(--navy)}
+.tag{display:inline-block;padding:3px 12px;background:var(--red);color:#FFFFFF;font:600 12.5px/1.5 Inter,sans-serif;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.tag-blue{background:var(--blue)}
+.date{color:var(--muted);font-size:14px}
+/* header */
+.top{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid var(--line)}
+.top .wrap{height:var(--hh);display:flex;align-items:center;gap:24px}
+.logo{display:block;flex:none;width:136px}
+.logo img{width:100%;height:auto}
+.nav{display:none;gap:2px;margin-left:4px}
+.nav a{padding:8px 10px;text-decoration:none;font-weight:600;font-size:15px;color:var(--ink);white-space:nowrap}
+.nav a:hover{color:var(--blue)}
+.nav a[aria-current]{color:var(--red)}
+.top-r{margin-left:auto;display:flex;align-items:center;gap:14px}
+.login{display:none;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.login:hover{color:var(--blue)}
+.top .btn{min-height:40px;padding:0 18px;font-size:14.5px;--slant:8px}
+.burger{width:44px;height:44px;border:0;background:transparent;display:grid;place-items:center;cursor:pointer;padding:0}
+.burger span,.burger span::before,.burger span::after{display:block;width:24px;height:3px;background:var(--ink);position:relative;transform:skewX(-11deg)}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-8px}.burger span::after{top:8px}
+.mnav{position:fixed;inset:var(--hh) 0 0 0;background:#FFFFFF;z-index:49;padding:12px var(--pad) 32px;overflow:auto;display:none}
+.mnav.open{display:block}
+.mnav a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font:800 italic 22px/1.2 Archivo,sans-serif;text-decoration:none}
+.mnav a[aria-current]{color:var(--red)}
+.mnav .btn{display:flex;padding:0 28px;margin-top:24px;width:100%;font:600 16px/1 Inter,sans-serif;border:0;color:#FFFFFF}
+.mnav .mlogin{font:600 16px/1.2 Inter,sans-serif;border:0;text-align:center;color:var(--blue)}
+@media (min-width:1180px){.nav{display:flex}.burger{display:none}.login{display:inline}:root{--hh:76px}.logo{width:164px}}
+/* hero */
+.hero{position:relative;min-height:calc(100svh - var(--hh));display:flex;flex-direction:column;justify-content:flex-end;color:#FFFFFF;overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),0 100%);background:#0A3D7A}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:50% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,47,94,.30) 0%,rgba(8,47,94,.55) 42%,rgba(6,30,62,.90) 100%)}
+.hero-in{position:relative;z-index:1;width:100%;max-width:var(--wrap);margin:0 auto;padding:40px var(--pad) 58px}
+.hero h1{font-size:clamp(30px,5.4vw,62px);max-width:18ch;text-wrap:balance}
+.hero .lead{font-size:clamp(16px,1.6vw,19px);line-height:1.55;max-width:600px;margin-top:18px;color:#E8EEF7}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-news{display:none}
+@media (min-width:960px) and (min-height:800px){
+ .hero-in{padding-bottom:36px}
+ .hero-news{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:clamp(40px,7vh,72px);padding-top:22px;border-top:1px solid rgba(255,255,255,.28)}
+ .hero-news a{text-decoration:none;display:block}
+ .hero-news b{display:block;font:800 italic 18px/1.25 Archivo,sans-serif;margin-top:8px}
+ .hero-news a:hover b{text-decoration:underline}
+ .hero-news .date{color:#C9D6E8}
+ .hero{clip-path:polygon(0 0,100% 0,100% calc(100% - 40px),0 100%)}
+ .hero-in{padding-bottom:64px}
+}
+/* puls */
+.puls{display:grid;gap:36px}
+.lead-story a{text-decoration:none;display:block}
+.lead-story img{width:100%;max-width:553px;aspect-ratio:553/311;object-fit:cover;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%)}
+.lead-story h3{font-size:clamp(24px,3vw,34px);margin:16px 0 12px;max-width:22ch}
+.lead-story p{color:var(--muted);max-width:60ch}
+.lead-story a:hover h3{color:var(--blue)}
+.news-list{display:grid;gap:0;align-content:start}
+.news-item{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line);text-decoration:none;align-items:start}
+.news-item:first-child{border-top:0;padding-top:0}
+.news-item img{width:120px;aspect-ratio:553/311;object-fit:cover}
+.news-item b{display:block;font:800 italic 17px/1.25 Archivo,sans-serif;margin-top:4px}
+.news-item:hover b{color:var(--blue)}
+.more-list{margin-top:44px;display:grid;gap:0 40px;border-top:3px solid var(--ink);padding-top:8px}
+.more-list a{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600}
+.more-list a:hover{color:var(--blue)}
+@media (min-width:900px){.puls{grid-template-columns:minmax(0,553px) 1fr;gap:56px}.news-item{grid-template-columns:168px 1fr}.news-item img{width:168px}.more-list{grid-template-columns:1fr 1fr}}
+/* prenumerata */
+.sub{background:var(--navy);color:#FFFFFF}
+.sub .sec-head p{color:#C9D6E8}
+.sub-grid{display:grid;gap:40px}
+.paywall{background:#FFFFFF;color:var(--ink);padding:clamp(22px,3vw,36px);position:relative;clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+.paywall h3{font-size:clamp(21px,2.4vw,27px);margin:14px 0 14px}
+.paywall .txt{color:#2A3647;position:relative}
+.paywall .txt p+p{margin-top:12px}
+.paywall .fade{position:relative;max-height:120px;overflow:hidden}
+.paywall .fade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0),#FFFFFF 85%)}
+.lockbox{margin-top:6px;padding-top:20px;border-top:3px solid var(--red)}
+.lockbox b{display:block;font:800 italic 20px/1.25 Archivo,sans-serif}
+.lockbox p{color:var(--muted);margin:6px 0 18px}
+.lockbox .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.lockbox .row a.plain{font-weight:600;color:var(--blue)}
+.plans{display:grid;gap:16px}
+.plan{border:1px solid rgba(255,255,255,.28);padding:24px 24px 26px;display:flex;flex-direction:column}
+.plan h3{font-size:22px}
+.plan .who{color:#C9D6E8;margin:6px 0 14px;font-size:15px}
+.plan ul{margin:0 0 20px;padding:0;list-style:none;display:grid;gap:8px}
+.plan li{padding-left:22px;position:relative;font-size:15.5px}
+.plan li::before{content:"";position:absolute;left:0;top:.62em;width:12px;height:4px;background:var(--red);transform:skewX(-20deg)}
+.plan .btn{margin-top:auto;align-self:flex-start}
+.plan-main{background:#FFFFFF;color:var(--ink);border-color:#FFFFFF}
+.plan-main .who{color:var(--muted)}
+.sub-note{margin-top:22px;color:#C9D6E8;font-size:15px;max-width:760px}
+@media (min-width:1000px){.sub-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:start}}
+@media (min-width:640px) and (max-width:999px){.plans{grid-template-columns:1fr 1fr}.plan-main{grid-column:1/-1}}
+/* strips */
+.strip-wrap{max-width:1840px;margin:0 auto;padding:0 clamp(16px,3vw,56px);position:relative}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 16px) / 1.18);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch}
+.strip::-webkit-scrollbar{display:none}
+.strip.drag{cursor:grabbing;scroll-snap-type:none}
+.strip>*{scroll-snap-align:start}
+.strip figure{margin:0}
+.strip button.ph{display:block;width:100%;padding:0;border:0;background:var(--line);cursor:zoom-in}
+.strip img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none;user-select:none}
+.strip figcaption{font-size:14.5px;color:var(--muted);margin-top:10px}
+.photo-strip .ph{aspect-ratio:16/9}
+.cover-strip{grid-auto-columns:calc((100% - 16px) / 1.6)}
+.cover-strip .ph{aspect-ratio:520/676;clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%)}
+.cover-strip figcaption b{display:block;color:var(--ink);font:800 italic 17px/1.2 Archivo,sans-serif}
+@media (min-width:640px){.strip{grid-auto-columns:calc((100% - 16px) / 1.5)}.cover-strip{grid-auto-columns:calc((100% - 48px) / 3.3)}}
+@media (min-width:900px){.strip{grid-auto-columns:calc((100% - 32px) / 2.3)}.cover-strip{grid-auto-columns:calc((100% - 64px) / 4.4)}}
+@media (min-width:1280px){.strip{grid-auto-columns:calc((100% - 32px) / 3)}.cover-strip{grid-auto-columns:calc((100% - 80px) / 6)}}
+@media (min-width:1700px){.strip{grid-auto-columns:calc((100% - 48px) / 4)}}
+.strip-nav{display:flex;gap:8px}
+.strip-nav button{width:46px;height:46px;border:0;background:var(--ink);color:#FFFFFF;cursor:pointer;clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%);font:700 20px/1 Inter,sans-serif}
+.strip-nav button:disabled{opacity:.25;cursor:default}
+.strip-nav button:not(:disabled):hover{background:var(--blue)}
+.pr-info{display:grid;gap:24px;margin-top:40px}
+.pr-info div{border-top:3px solid var(--ink);padding-top:14px}
+.pr-info b{font:800 italic 19px/1.25 Archivo,sans-serif;display:block;margin-bottom:6px}
+.pr-info p{color:var(--muted);font-size:15.5px}
+@media (min-width:800px){.pr-info{grid-template-columns:repeat(3,1fr);gap:40px}}
+/* rankingi */
+.rank-grid{display:grid;gap:28px}
+.rank{text-decoration:none;display:block}
+.rank .im{position:relative}
+.rank img{width:100%;aspect-ratio:553/311;object-fit:cover}
+.rank .im .tag{position:absolute;left:14px;bottom:-13px}
+.rank h3{margin:26px 0 8px;font-size:clamp(19px,2vw,21px)}
+.rank p{color:var(--muted);font-size:15.5px}
+.rank:hover h3{color:var(--blue)}
+.top77{margin-top:40px;display:grid;gap:12px}
+.top77 a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;background:var(--gray);text-decoration:none;font:800 italic clamp(18px,2vw,22px)/1.2 Archivo,sans-serif;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 100%,0 100%)}
+.top77 a span{font:600 14px/1.3 Inter,sans-serif;color:var(--muted);white-space:nowrap;padding-right:14px}
+.top77 a:hover{color:var(--blue)}
+@media (min-width:700px){.rank-grid{grid-template-columns:1fr 1fr}.top77{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.rank-grid{grid-template-columns:repeat(4,1fr)}}
+/* repack */
+.repack-top{display:grid;gap:28px;margin-bottom:36px}
+.repack-top .facts{display:grid;gap:14px}
+.repack-top .facts div{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:baseline;border-top:1px solid #C9D3DF;padding-top:12px}
+.repack-top .facts b{font:800 italic 18px/1.2 Archivo,sans-serif;color:var(--red)}
+.repack-top .txt p{color:#2A3647;max-width:62ch}
+.repack-top .txt p+p{margin-top:12px}
+.repack-top .btn{margin-top:24px}
+@media (min-width:960px){.repack-top{grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}}
+/* firmy */
+.biz{display:grid;gap:44px}
+.katalog img{width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:22px;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%)}
+.katalog h3,.cn h3,.job h3{font-size:clamp(22px,2.6vw,28px);margin-bottom:10px}
+.katalog p,.job p{color:var(--muted)}
+.cats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.cats a{padding:8px 14px;border:1px solid var(--line);text-decoration:none;font-size:14.5px;font-weight:600}
+.cats a:hover{border-color:var(--blue);color:var(--blue)}
+.cn ul{list-style:none;margin:6px 0 0;padding:0}
+.cn li a{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600}
+.cn li a:hover{color:var(--blue)}
+.cn small{display:block;color:var(--muted);margin-top:4px;font-size:14px}
+.job{margin-top:40px;padding:24px;background:var(--gray)}
+.job .btn{margin-top:16px}
+@media (min-width:960px){.biz{grid-template-columns:1.1fr 1fr;gap:64px}}
+/* newsletter */
+.nl{margin-top:clamp(56px,8vw,88px);display:grid;gap:22px;padding:clamp(24px,4vw,44px);background:var(--blue);color:#FFFFFF;clip-path:polygon(0 0,100% 0,100% calc(100% - 24px),calc(100% - 24px) 100%,0 100%)}
+.nl p{color:#DCE6F4;margin-top:10px;max-width:52ch}
+.nl form{display:grid;gap:12px;align-content:center}
+.nl .f{display:flex;flex-wrap:wrap;gap:10px}
+.nl input[type=email]{flex:1 1 220px;min-height:50px;padding:0 16px;border:0;font:400 16px Inter,sans-serif;color:var(--ink)}
+.nl label.ok{font-size:14px;color:#DCE6F4;display:flex;gap:10px;align-items:flex-start}
+.nl label.ok input{margin-top:4px}
+.nl .msg{font-weight:600;min-height:1.4em}
+@media (min-width:900px){.nl{grid-template-columns:1fr 1fr;gap:48px}}
+/* footer */
+.foot{background:var(--gray);padding:52px 0 28px;font-size:15px;color:#2A3647;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px}
+.foot-grid .first{grid-column:1/-1}
+.foot img{width:150px;margin-bottom:14px}
+.foot h4{margin:0 0 10px;font:800 italic 16px/1.2 Archivo,sans-serif;color:var(--ink)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--blue);text-decoration:underline}
+.foot-bottom{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--muted)}
+@media (min-width:900px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}.foot-grid .first{grid-column:auto}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,18,36,.94);display:none;align-items:center;justify-content:center;padding:56px 12px}
+.lb.open{display:flex}
+.lb img{max-width:min(1400px,100%);max-height:100%;object-fit:contain}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#FFFFFF;width:48px;height:48px;font:600 22px/1 Inter,sans-serif;cursor:pointer}
+.lb .x{top:10px;right:10px}.lb .p{left:10px;top:50%;transform:translateY(-50%)}.lb .n{right:10px;top:50%;transform:translateY(-50%)}
+.lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#DCE6F4;font-size:14px;padding:0 16px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+{{BADGE_STYLE}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="Plastics ONLINE - eplastics.pl, strona główna"><img src="img/logo.svg" alt="Plastics ONLINE" width="279" height="66"></a>
+  <nav class="nav" aria-label="Menu główne">
+   <a href="#puls" aria-current="page">Wiadomości</a>
+   <a href="#prenumerata">Prenumerata</a>
+   <a href="#plastics-review">Plastics Review</a>
+   <a href="#rankingi">Rankingi</a>
+   <a href="#repack">Konferencje</a>
+   <a href="#firmy">Katalog firm</a>
+   <a href="#praca">Praca</a>
+  </nav>
+  <div class="top-r">
+   <a class="login" href="#prenumerata">Zaloguj się</a>
+   <a class="btn" href="#prenumerata">Prenumerata</a>
+   <button class="burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
+ </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu mobilne">
+ <a href="#puls" aria-current="page">Wiadomości</a>
+ <a href="#prenumerata">Prenumerata</a>
+ <a href="#plastics-review">Plastics Review</a>
+ <a href="#rankingi">Rankingi</a>
+ <a href="#repack">Konferencje</a>
+ <a href="#firmy">Katalog firm</a>
+ <a href="#praca">Praca</a>
+ <a class="btn" href="#prenumerata">Wybierz prenumeratę</a>
+ <a class="mlogin" href="#prenumerata">Zaloguj się</a>
+</nav>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+ <picture>
+  <source media="(max-width:699px)" srcset="img/hero-m-720.webp 720w, img/hero-m-1080.webp 1080w" sizes="100vw">
+  <img src="img/hero-1920.webp" srcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2560.webp 2560w" sizes="100vw" width="2560" height="1437" alt="Niebieski granulat tworzywa sztucznego z bliska" fetchpriority="high">
+ </picture>
+ <div class="hero-in">
+  <h1 id="h1">Portal branży tworzyw sztucznych, recyklingu i opakowań</h1>
+  <p class="lead">Wiadomości z rynku, analizy, rankingi i magazyn Plastics Review. Branża tworzyw jest dziś w centrum transformacji, a my opisujemy ją od blisko trzech dekad.</p>
+  <div class="hero-btns">
+   <a class="btn" href="#puls">Czytaj najnowsze</a>
+   <a class="btn btn-white" href="#prenumerata">Prenumerata</a>
+  </div>
+  <div class="hero-news" aria-label="Najnowsze wiadomości">
+   <a href="#puls"><span class="date">20.11.2026</span><b>Blitzkrieg monomateriałów w opakowaniach</b></a>
+   <a href="#puls"><span class="date">19.11.2026</span><b>Włosi ratują recykling</b></a>
+   <a href="#puls"><span class="date">18.11.2026</span><b>Koniec ery pierwotnych pianek w transporcie hi-tech?</b></a>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="puls" aria-labelledby="h-puls">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><h2 id="h-puls">Puls Branży</h2><p>Codzienne wiadomości z polskiego i europejskiego rynku tworzyw. Otwarte dla wszystkich czytelników.</p></div>
+   <a class="btn btn-blue" href="#puls">Wszystkie wiadomości</a>
+  </div>
+  <div class="puls">
+   <article class="lead-story">
+    <a href="#puls">
+     <img src="img/n17117.webp" width="553" height="311" alt="Opakowania z oznaczeniem recyklingu" loading="lazy">
+     <h3>Blitzkrieg monomateriałów w opakowaniach</h3>
+     <p>Monomateriały dominują w opakowaniach giętkich: PE i PP odpowiadają za 97% rynku. Nowy raport Smithers kreśli mapę drogową dla branży tworzyw sztucznych do 2031 roku.</p>
+     <p class="date" style="margin-top:12px">20.11.2026 · opakowania elastyczne, recykling</p>
+    </a>
+   </article>
+   <div class="news-list">
+    <a class="news-item" href="#puls"><img src="img/n17116.webp" width="553" height="311" alt="" loading="lazy"><span><span class="date">19.11.2026</span><b>Włosi ratują recykling: 36% ulgi za recyklaty</b></span></a>
+    <a class="news-item" href="#puls"><img src="img/n17115.webp" width="553" height="311" alt="" loading="lazy"><span><span class="date">18.11.2026</span><b>Koniec ery pierwotnych pianek w transporcie hi-tech?</b></span></a>
+    <a class="news-item" href="#puls"><img src="img/n17109.webp" width="553" height="311" alt="" loading="lazy"><span><span class="date">17.11.2026</span><b>Tylko 18% opakowań z tworzyw sztucznych trafia do realnego recyklingu</b></span></a>
+    <a class="news-item" href="#puls"><img src="img/n17107.webp" width="553" height="311" alt="" loading="lazy"><span><span class="date">13.11.2026</span><b>Pięciu inżynierów na 180 wtryskarek i 95 procent OEE</b></span></a>
+   </div>
+  </div>
+  <div class="more-list">
+   <a href="#puls">Cyfrowy pancerz dla przetwórców tworzyw</a>
+   <a href="#puls">Stala Group w restrukturyzacji</a>
+   <a href="#puls">Papier medyczny kontra folie barierowe</a>
+   <a href="#puls">Wojna cenowa organizacji odzysku</a>
+   <a href="#puls">Rewolucja PPWR w branży piekarniczej</a>
+   <a href="#puls">Chiński PA6 pod lupą Brukseli</a>
+  </div>
+ </div>
+</section>
+
+<section class="sec sub" id="prenumerata" aria-labelledby="h-sub">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><h2 id="h-sub">Prenumerata eplastics.pl</h2><p>Wiadomości zostają otwarte. Pełne analizy rynku, raporty sektorowe, rankingi firm i archiwum e-wydań Plastics Review czytają prenumeratorzy, po zalogowaniu na swoje konto.</p></div>
+  </div>
+  <div class="sub-grid">
+   <article class="paywall" aria-label="Przykład artykułu dla prenumeratorów">
+    <span class="tag">Dla prenumeratorów</span>
+    <h3>Liderzy Rozwoju w Produkcji Folii i Opakowań Elastycznych: od sprintu do selekcji</h3>
+    <p class="date">27.09.2026 · Ranking 2026</p>
+    <div class="txt" style="margin-top:14px">
+     <p>Gdy w 2021 roku polski rynek opakowań z tworzyw przebił 26,7 mld zł i urósł o ponad 26 proc. rok do roku, branża mogła jeszcze uwierzyć, że pandemia zostawiła jej trwały prezent: popyt na folie spożywcze, e-commerce i higienę.</p>
+     <div class="fade"><p>Rok 2022 dopisał kolejny akt. Wartość segmentu opakowań elastycznych skoczyła z 16,6 mld zł do 18,7 mld zł, ponad 12 proc. na już napompowanej bazie. Surowce i energia pchały ceny w górę, a konwerterzy przez chwilę wyglądali na zwycięzców inflacji.</p></div>
+    </div>
+    <div class="lockbox">
+     <b>Dalsza część analizy i pełny ranking są dostępne w prenumeracie</b>
+     <p>Dostęp od razu po opłaceniu: BLIK, karta albo szybki przelew.</p>
+     <div class="row"><a class="btn" href="#plany">Wybierz prenumeratę</a><a class="plain" href="#prenumerata">Mam konto, loguję się</a></div>
+    </div>
+   </article>
+   <div id="plany">
+    <div class="plans">
+     <div class="plan">
+      <h3>Konto bezpłatne</h3>
+      <p class="who">Dla każdego czytelnika</p>
+      <ul><li>wszystkie wiadomości i Company News</li><li>newsletter branżowy</li><li>zapisy na konferencje REPACK</li></ul>
+      <a class="btn btn-white" href="#prenumerata">Załóż konto</a>
+     </div>
+     <div class="plan plan-main">
+      <h3>Prenumerata indywidualna</h3>
+      <p class="who">Miesięczna albo roczna, odnawia się automatycznie</p>
+      <ul><li>pełne analizy i raporty sektorowe</li><li>rankingi firm i segmentów rynku</li><li>archiwum e-wydań Plastics Review</li><li>faktura do każdej płatności</li></ul>
+      <a class="btn" href="#prenumerata">Wybieram</a>
+     </div>
+     <div class="plan">
+      <h3>Prenumerata firmowa</h3>
+      <p class="who">Dla działów zakupów, zarządów i zespołów</p>
+      <ul><li>kilka kont w jednej opłacie</li><li>jedna faktura dla firmy</li><li>wszystko z prenumeraty indywidualnej</li></ul>
+      <a class="btn btn-white" href="#prenumerata">Zapytaj o ofertę</a>
+     </div>
+    </div>
+    <p class="sub-note">Ceny i okresy prenumeraty redakcja ustawia sama w panelu. W panelu widać też listę prenumeratorów, daty odnowień i płatności.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec sec-gray" id="plastics-review" aria-labelledby="h-pr">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><h2 id="h-pr">Plastics Review</h2><p>Miesięcznik menedżerów i technologów przemysłu polimerowego. Każde wydanie w wersji elektronicznej, w archiwum dla prenumeratorów.</p></div>
+   <div class="strip-nav" data-for="covers"><button type="button" class="prev" aria-label="Poprzednie okładki">&#8249;</button><button type="button" class="next" aria-label="Następne okładki">&#8250;</button></div>
+  </div>
+ </div>
+ <div class="wrap">
+  <div class="strip cover-strip" id="covers">
+   <figure><button class="ph" type="button" data-full="img/pr0524.webp"><img src="img/pr0524.webp" width="520" height="676" alt="Okładka Plastics Review, maj 2024" loading="lazy"></button><figcaption><b>Maj 2024</b>Gwiazdy wzrostu przemysłu tworzyw</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/pr1223.webp"><img src="img/pr1223.webp" width="520" height="676" alt="Okładka Plastics Review, grudzień 2023" loading="lazy"></button><figcaption><b>Grudzień 2023</b>Konferencja Recyklingowa 2023</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/pr2212.webp"><img src="img/pr2212.webp" width="520" height="676" alt="Okładka Plastics Review, grudzień 2022" loading="lazy"></button><figcaption><b>Grudzień 2022</b>TOP 77 Flexible i Rigid Packaging</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/pr2209.webp"><img src="img/pr2209.webp" width="520" height="677" alt="Okładka Plastics Review, wrzesień 2022" loading="lazy"></button><figcaption><b>Wrzesień 2022</b>2021: złoty rok dystrybucji</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/pr2111.webp"><img src="img/pr2111.webp" width="520" height="677" alt="Okładka Plastics Review z 2021 roku" loading="lazy"></button><figcaption><b>Listopad 2021</b>Wydanie elektroniczne</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/pr2110.webp"><img src="img/pr2110.webp" width="520" height="677" alt="Okładka Plastics Review, jesień 2021" loading="lazy"></button><figcaption><b>Jesień 2021</b>Big Dealers: ranking dystrybutorów</figcaption></figure>
+  </div>
+  <div class="pr-info">
+   <div><b>E-wydania na koncie</b><p>Prenumerator czyta numery na telefonie i komputerze, bez osobnych linków i plików.</p></div>
+   <div><b>Wydanie drukowane</b><p>Zamówienie prenumeraty papierowej w tym samym koszyku, z adresem wysyłki innym niż adres płatnika.</p></div>
+   <div><b>Reklama w magazynie</b><p>Kalendarz wydawniczy, cennik i formaty reklam w jednym miejscu, do pobrania przez reklamodawców.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="rankingi" aria-labelledby="h-rank">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><h2 id="h-rank">Raporty i rankingi</h2><p>Liderzy rynku opakowań, najszybciej rosnący dystrybutorzy i recyklerzy. Krótkie omówienie dla wszystkich, pełne zestawienia w prenumeracie.</p></div>
+  </div>
+  <div class="rank-grid">
+   <a class="rank" href="#prenumerata"><div class="im"><img src="img/r17047.webp" width="553" height="311" alt="Ranking 2026: opakowania elastyczne" loading="lazy"><span class="tag">Prenumerata</span></div><h3>Liderzy Rozwoju w Produkcji Folii i Opakowań Elastycznych</h3><p class="date">27.09.2026</p></a>
+   <a class="rank" href="#prenumerata"><div class="im"><img src="img/r17048.webp" width="553" height="311" alt="Ranking 2026: drukowanie opakowań" loading="lazy"><span class="tag">Prenumerata</span></div><h3>Liderzy Rozwoju Druku Opakowań Elastycznych</h3><p>Fleksografia w latach 2021-2024</p></a>
+   <a class="rank" href="#puls"><div class="im"><img src="img/r17086.webp" width="553" height="311" alt="Wręczenie statuetki podczas gali" loading="lazy"><span class="tag tag-blue">Otwarte</span></div><h3>PLASTMOROZ: Lider Rynku Opakowań Elastycznych w Polsce</h3><p class="date">04.11.2026</p></a>
+   <a class="rank" href="#puls"><div class="im"><img src="img/r17088.webp" width="553" height="311" alt="Wręczenie nagrody podczas gali Growth Stars Night" loading="lazy"><span class="tag tag-blue">Otwarte</span></div><h3>SÜDPACK Kłobuck: Lider Druku Opakowań Elastycznych w Polsce</h3><p>Gala Growth Stars Night</p></a>
+  </div>
+  <div class="top77">
+   <a href="#prenumerata">TOP 77 Flexible Packaging in Poland <span>pełna lista</span></a>
+   <a href="#prenumerata">TOP 77 Rigid Packaging in Poland <span>pełna lista</span></a>
+  </div>
+ </div>
+</section>
+
+<section class="sec sec-gray" id="repack" aria-labelledby="h-repack">
+ <div class="wrap">
+  <div class="repack-top">
+   <div class="txt">
+    <h2 id="h-repack" style="margin-bottom:20px">REPACK 2026: pełna sala i realny biznes</h2>
+    <p>Ponad 400 uczestników z przeszło 140 firm i ponad 1200 m² przestrzeni w warszawskim Sound Garden. REPACK to nowa marka Konferencji Foliowej i Recyklingowej, która łączy producentów opakowań z sektorem recyklingu.</p>
+    <p>Na portalu: program, prelegenci, zapisy z formularzem i płatnością, a po konferencji relacja, zdjęcia i film.</p>
+    <a class="btn" href="#repack">Relacja z REPACK 2026</a>
+   </div>
+   <div class="facts">
+    <div><b>28.10.2026</b><span>Konferencja Foliowa, Packaging Day. The future is flexible.</span></div>
+    <div><b>29.10.2026</b><span>Konferencja Recyklingowa. The future is circular.</span></div>
+    <div><b>Gala</b><span>Growth Stars Night i statuetki Liderów Rynku Opakowań.</span></div>
+    <div><b>PPWR</b><span>Osobna konferencja o rozporządzeniu w sprawie opakowań.</span></div>
+   </div>
+  </div>
+ </div>
+ <div class="wrap" style="display:flex;justify-content:flex-end;margin-bottom:16px">
+  <div class="strip-nav" data-for="repack-photos"><button type="button" class="prev" aria-label="Poprzednie zdjęcia">&#8249;</button><button type="button" class="next" aria-label="Następne zdjęcia">&#8250;</button></div>
+ </div>
+ <div class="strip-wrap">
+  <div class="strip photo-strip" id="repack-photos">
+   <figure><button class="ph" type="button" data-full="img/rel1.webp"><img src="img/rel1.webp" width="850" height="478" alt="Sale konferencyjne REPACK 2026" loading="lazy"></button><figcaption>Sale konferencyjne</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/rel2.webp"><img src="img/rel2.webp" width="850" height="478" alt="Kuluary REPACK 2026" loading="lazy"></button><figcaption>Kuluary</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/nagrody.webp"><img src="img/nagrody.webp" width="900" height="506" alt="Laureaci gali Growth Stars Night" loading="lazy"></button><figcaption>Gala Growth Stars Night</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/rel3.webp"><img src="img/rel3.webp" width="850" height="478" alt="Liderzy Rynku Opakowań na scenie" loading="lazy"></button><figcaption>Liderzy Rynku Opakowań</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/debata.webp"><img src="img/debata.webp" width="553" height="311" alt="Debata branżowa podczas REPACK 2026" loading="lazy"></button><figcaption>Debata branżowa</figcaption></figure>
+   <figure><button class="ph" type="button" data-full="img/rel5.webp"><img src="img/rel5.webp" width="850" height="478" alt="Prelekcje i stoiska wystawców" loading="lazy"></button><figcaption>Prelekcje i stoiska</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="firmy" aria-labelledby="h-firmy">
+ <div class="wrap">
+  <div class="sec-head"><div><h2 id="h-firmy">Firmy branży</h2><p>Katalog dostawców, wiadomości firm w języku angielskim i oferty pracy.</p></div></div>
+  <div class="biz">
+   <div class="katalog">
+    <img src="img/arburg-800.webp" srcset="img/arburg-800.webp 800w, img/arburg-1600.webp 1600w" sizes="(min-width:1240px) 600px, (min-width:960px) 50vw, 100vw" width="1600" height="1065" alt="Wtryskarka na stoisku targowym" loading="lazy">
+    <h3>Katalog firm</h3>
+    <p>Dostawcy surowców, maszyn i usług z wizytówką, opisem i danymi kontaktowymi. Filtrowanie po surowcu i profilu produkcji.</p>
+    <div class="cats">
+     <a href="#firmy">PE</a><a href="#firmy">PP</a><a href="#firmy">PS</a><a href="#firmy">PA</a><a href="#firmy">PUR</a><a href="#firmy">Blendy</a><a href="#firmy">Dodatki</a><a href="#firmy">Dostawcy maszyn</a><a href="#firmy">Opakowania</a><a href="#firmy">Motoryzacja</a><a href="#firmy">Budownictwo</a>
+    </div>
+   </div>
+   <div>
+    <div class="cn">
+     <h3>Company News</h3>
+     <ul>
+      <li><a href="#firmy">The Ultimate Antiblocking Solution for low SIT lamination films<small>Axtral, Aksoy Plastik</small></a></li>
+      <li><a href="#firmy">SMARTshot i brings Intelligence to LSR Molds</a></li>
+      <li><a href="#firmy">BASF Group in second quarter 2026</a></li>
+      <li><a href="#firmy">ENGEL at Plastpol 2026</a></li>
+      <li><a href="#firmy">Hellweg at PRS Europe</a></li>
+     </ul>
+    </div>
+    <div class="job" id="praca">
+     <h3>Praca w branży tworzyw</h3>
+     <p>Oferty pracy dla technologów, handlowców i kadry zarządzającej. Firma dodaje ofertę sama, z płatnością online, a redakcja ją zatwierdza.</p>
+     <a class="btn btn-blue" href="#praca">Dodaj ofertę pracy</a>
+    </div>
+   </div>
+  </div>
+  <div class="nl" id="newsletter">
+   <div><h2 style="font-size:clamp(26px,3.4vw,38px)">Newsletter eplastics.pl</h2><p>Najważniejsze sprawy branży tworzyw sztucznych w Polsce i na świecie, raz w tygodniu na Twoją skrzynkę.</p></div>
+   <form novalidate>
+    <div class="f"><input type="email" name="email" placeholder="Adres e-mail" aria-label="Adres e-mail" autocomplete="email"><button class="btn btn-white" type="submit">Zapisuję się</button></div>
+    <label class="ok"><input type="checkbox" name="zgoda"> Akceptuję regulamin newslettera.</label>
+    <p class="msg" aria-live="polite"></p>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div class="first">
+    <img src="img/logo.svg" alt="Plastics ONLINE" width="279" height="66" loading="lazy">
+    <p><b>Wydawnictwo BUSINESS IMAGE</b><br>ul. Włodarzewska 43E/39, 02-384 Warszawa<br><a href="mailto:redakcja@eplastics.pl">redakcja@eplastics.pl</a> · <a href="tel:+48501131404">501 131 404</a></p>
+   </div>
+   <div><h4>Portal</h4><ul><li><a href="#puls">Wiadomości</a></li><li><a href="#puls">Puls Branży</a></li><li><a href="#firmy">Company News</a></li><li><a href="#repack">Konferencje</a></li><li><a href="#praca">Praca</a></li></ul></div>
+   <div><h4>Wydawnictwo</h4><ul><li><a href="#prenumerata">Prenumerata</a></li><li><a href="#plastics-review">Reklama i cennik</a></li><li><a href="#plastics-review">Kalendarz wydawniczy</a></li><li><a href="#firmy">Regulamin</a></li><li><a href="#firmy">English</a></li></ul></div>
+   <div><h4>Nasze tytuły</h4><ul><li>Plastics Review</li><li>Chemical Review</li><li>Rubber Review</li><li>Composites Review</li></ul></div>
+  </div>
+  <div class="foot-bottom">
+   <span>© 2026 Business Image Publishing House. Podgląd koncepcji strony. Zdjęcie na pierwszym ekranie: ISIPLAST S.A. de C.V., Wikimedia Commons, CC BY-SA 4.0; wtryskarka: Wikimedia Commons, CC0.</span>
+   {{BADGE_LINK}}
+  </div>
+ </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+ <img alt=""><p class="cap"></p>
+ <button class="x" type="button" aria-label="Zamknij">&#10005;</button><button class="p" type="button" aria-label="Poprzednie">&#8249;</button><button class="n" type="button" aria-label="Następne">&#8250;</button>
+</div>
+
+<script defer>
+(function(){
+ var b=document.querySelector('.burger'),m=document.getElementById('mnav');
+ b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu');document.body.style.overflow=o?'hidden':''});
+ m.addEventListener('click',function(e){if(e.target.closest('a')){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}});
+ document.querySelectorAll('.strip').forEach(function(s){
+  var nav=document.querySelector('.strip-nav[data-for="'+s.id+'"]'),pv=nav&&nav.querySelector('.prev'),nx=nav&&nav.querySelector('.next');
+  function upd(){if(!nav)return;pv.disabled=s.scrollLeft<4;nx.disabled=s.scrollLeft+s.clientWidth>=s.scrollWidth-4}
+  function step(){var c=s.children[0];return c.getBoundingClientRect().width+16}
+  if(nav){pv.onclick=function(){s.scrollBy({left:-step(),behavior:'smooth'})};nx.onclick=function(){s.scrollBy({left:step(),behavior:'smooth'})}}
+  s.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+  var down=false,x0=0,l0=0,moved=0;
+  s.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=0;x0=e.clientX;l0=s.scrollLeft});
+  window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>4){s.classList.add('drag');moved=Math.abs(dx)}s.scrollLeft=l0-dx});
+  window.addEventListener('pointerup',function(){if(!down)return;down=false;if(s.classList.contains('drag')){s.classList.remove('drag');var w=step();s.scrollTo({left:Math.round(s.scrollLeft/w)*w,behavior:'smooth'})}});
+  s.addEventListener('click',function(e){if(moved>6){e.preventDefault();e.stopPropagation();moved=0}},true);
+ });
+ var lb=document.getElementById('lb'),li=lb.querySelector('img'),lc=lb.querySelector('.cap'),list=[],idx=0;
+ function show(i){idx=(i+list.length)%list.length;var t=list[idx];li.src=t.dataset.full;li.alt=t.querySelector('img').alt;lc.textContent=t.querySelector('img').alt+'  '+(idx+1)+' / '+list.length}
+ document.querySelectorAll('.ph').forEach(function(p){p.addEventListener('click',function(){list=[].slice.call(p.closest('.strip').querySelectorAll('.ph'));show(list.indexOf(p));lb.classList.add('open');lb.querySelector('.x').focus()})});
+ function close(){lb.classList.remove('open')}
+ lb.querySelector('.x').onclick=close;lb.querySelector('.p').onclick=function(){show(idx-1)};lb.querySelector('.n').onclick=function(){show(idx+1)};
+ lb.addEventListener('click',function(e){if(e.target===lb)close()});
+ document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1)});
+ var sx=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(idx+(d<0?1:-1))});
+ var f=document.querySelector('.nl form');f.addEventListener('submit',function(e){e.preventDefault();var msg=f.querySelector('.msg'),em=f.email.value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){msg.textContent='Wpisz poprawny adres e-mail.';return}if(!f.zgoda.checked){msg.textContent='Zaznacz akceptację regulaminu.';return}msg.textContent='To podgląd: na gotowej stronie tu przyjdzie potwierdzenie zapisu.'});
+})();
+</script>
+</body>
+</html>
